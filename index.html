@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o ChartJS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="titulo">
+        <div class="fi">
+            <h1> Utilizando ChartJS pela primeira vez </h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="elemento">
+            <h3>Gráfico de Barras</h3>
+            <div>
+                <canvas id="GraficoBarras" style="position: relative; height: 40vh; width: 48vw;"></canvas>
+            </div>
+        </div>
+        <div class="elemento">
+            <h3>Gráfico de Linhas</h3>
+            <div>
+                <canvas id="GraficoLinhas" style="position: relative; height: 40vh; width: 48vw;"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const GraficoBarras = document.getElementById('GraficoBarras');
+
+    new Chart(GraficoBarras, {
+        type: 'bar',
+        data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            datasets: [{
+                label: 'Temperatura',
+                data: [22, 24, 27, 23, 20, 18],
+                borderWidth: 1
+            },
+            {
+                label: 'Umidade',
+                data: [90, 89, 93, 87, 88, 82],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const GraficoLinhas = document.getElementById('GraficoLinhas');
+
+    new Chart(GraficoLinhas, {
+        type: 'line',
+        data: {
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+            datasets: [{
+                label: 'Temperatura',
+                data: [30, 29, 28, 25, 22, 23],
+                borderWidth: 1
+            },
+            {
+                label: 'Umidade',
+                data: [80, 82, 80, 85, 80, 83],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+</script>

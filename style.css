@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Inter;
+    src: url("src/font/Inter/static/Inter-Regular.ttf");
+}
+
+body {
+min-height: 100%;
+}
+
+.titulo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.fi{
+    width: 40%;
+    height: fit-content;
+    border: 1px solid black;
+
+}
+
+.fi h1 {
+    font-family: Inter;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.container {
+    margin-top: 5%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.container .elemento {
+    font-family: Inter;
+}
+
